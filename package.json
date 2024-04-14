@@ -1,0 +1,22 @@
+{
+  "name": "module-fed",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "start": "turbo start:live",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "npx @biomejs/biome format --write \"**/*.{ts,tsx,md}\"",
+    "format:apply": "npx @biomejs/biome check --apply apps --no-errors-on-unmatched",
+    "format:ci": "npx @biomejs/biome ci apps",
+    "check:format:lint": "npx @biomejs/biome check apps --files-ignore-unknown=true  --no-errors-on-unmatched"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {}
+}
